@@ -46,16 +46,27 @@ export default new Vuex.Store({
     login: async ({commit}, data) =>{
         return new Promise((resolve, reject) => {
           axios.post(`${API}signin`, data)
-          .then(resp => {            
-            const token = resp.data.token        
-            commit('auth_success', token)
+          .then(resp => {    
+            const token = resp.data.token            
+            commit('auth_success', token)        
             resolve(resp)
           })
           .catch(err => {            
             reject(err)
           })
         })
-    },   
+    },
+    register: async ({commit}, data) =>{
+        return new Promise((resolve, reject) => {
+          axios.post(`${API}signup`, data)
+          .then(resp => {           
+            resolve(resp)
+          })
+          .catch(err => {            
+            reject(err)
+          })
+        })
+    }, 
     getTaks: async ({commit}) =>{
         return new Promise((resolve, reject) => {
           axios.get(`${API}task`)

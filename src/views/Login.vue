@@ -8,19 +8,22 @@
                         <hr>
                         <form @submit.prevent="login">
                             <div class="form-group">
-                                <input name="" class="form-control" placeholder="Correo electronico" required type="email" v-model="email" >
+                                <input name="email" class="form-control" placeholder="Correo electronico" required type="email" v-model="email" >
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="******" type="password" required v-model="password" >
+                                <input  name="password" class="form-control" placeholder="******" type="password" required v-model="password" >
                             </div>                                    
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-primary btn-block"> Ingresar  </button>
+                                        <button type="submit" class="btn btn-success btn-block"> Ingresar  </button>
                                     </div>
                                 </div>                                                                 
                             </div>
                         </form>
+                         <div class="row">                          
+                                <router-link class="btn btn-primary btn-block" to="/register">Crear usuario</router-link>                                                                                    
+                        </div>
                     </div>
                 </div>
             </div>
