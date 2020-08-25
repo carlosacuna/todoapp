@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
 
-const API = 'http://localhost:3000/api/';
+const API = 'http://carlosa.space:3000/api/';
 
 Vue.use(Vuex)
 
@@ -37,6 +37,8 @@ export default new Vuex.Store({
     },
     logout(state){
       state.token = false
+      state.tasks = []
+      state.dataForm = false
       localStorage.removeItem('token')      
     },
   },
