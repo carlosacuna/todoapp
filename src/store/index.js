@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
 
-const API = 'http://carlosa.space:3000/api/';
+const API = 'http://localhost:3000/api/';
 
 Vue.use(Vuex)
 
